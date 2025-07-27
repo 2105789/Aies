@@ -1,0 +1,21 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+  ssr: false, // Client-side only for camera access
+  devServer: {
+    host: '0.0.0.0' // Allow access from other devices on network
+  },
+  runtimeConfig: {
+    geminiApiKey: process.env.GEMINI_API_KEY,
+    murfApiKey: process.env.MURF_API_KEY,
+    public: {
+      appVersion: process.env.APP_VERSION || '1.0.0'
+    }
+  },
+  nitro: {
+    preset: 'static'
+  }
+})
