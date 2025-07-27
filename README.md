@@ -42,8 +42,7 @@ An AI-powered accessibility application designed specifically for blind and visu
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd vision-assistant
+   git clone https://github.com/2105789/Aies
    ```
 
 2. **Install dependencies**
